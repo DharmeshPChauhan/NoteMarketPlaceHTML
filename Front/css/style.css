@@ -180,7 +180,6 @@ div.dropdown-menu > a:hover {
 /*===========================
         Home Page
 ==========================*/
-
 #homebanner {
     position: relative;
 }
@@ -1910,6 +1909,7 @@ footer ul.social-list li a {
 }
 
 #login-btn a,
+#login-button,
 #forgot-pass-submit-btn a,
 #change-password-submit-btn a,
 #signup-btn a {
