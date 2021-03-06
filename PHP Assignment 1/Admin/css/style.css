@@ -1,0 +1,1480 @@
+/*==========================
+    Login - Forgot Password
+==========================*/
+#bg-img img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+
+#login-top-logo {
+    margin-top: 30%;
+}
+
+#forgot-password #fp-top-logo {
+    margin-top: 50%;
+}
+
+#login-box-white,
+#fp-box-white {
+    height: 100%;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+#login-box-head h3,
+#fp-box-head h3 {
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+}
+
+#login-box-head p,
+#fp-box-head p {
+    margin-bottom: 35px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #333333;
+}
+
+#login-form .form-group label,
+#forgot-pass-form .form-group label {
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+}
+
+#login-form .form-group input::placeholder,
+#forgot-pass-form .form-group input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a;
+}
+
+#password-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#password-row a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #6255a5;
+    text-decoration: none;
+}
+
+#forgot-pass-submit-btn {
+    margin-top: 30px;
+}
+
+#login-btn a,
+#forgot-pass-submit-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#signup-link {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#signup-link p {
+    display: inline-flex;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+#signup-link a {
+    display: inline-flex;
+    margin-left: 3px;
+    color: #6255a5;
+    text-decoration: none;
+}
+
+.field-icon {
+    float: right;
+    margin-right: 15px;
+    margin-top: -32px;
+    position: relative;
+    z-index: 2;
+}
+
+/*======================
+    Navigation Menu
+======================*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+#mynav {
+    height: 76px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+    transition: all .3s;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    padding: 10px 0;
+    background: #ffffff;
+}
+
+#mynav a.navbar-brand img {
+    width: 220px;
+    height: 35px;
+}
+
+#navbarmenu {
+    background: #fff;
+}
+
+#navbarmenu ul > li {
+    margin: 0 10px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    height: 40px;
+    vertical-align: middle;
+}
+
+#navbarmenu ul > li:last-child {
+    margin-right: 0;
+}
+
+#navbarmenu ul > li > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 18px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#navbarmenu ul > li > a > img {
+    height: 38px;
+    width: 38px;
+}
+
+#navbarmenu ul li a#home-login-btn {
+    width: 89px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    padding: 10px 0;
+    color: #fff;
+    text-transform: capitalize;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#navbarmenu ul > li.dropdown > a#userdropdownMenu {
+    padding: 0;
+}
+
+#navbarmenu ul > li > a:hover {
+    background: none;
+    color: #6255a5;
+}
+
+#navbarmenu ul > li > a.active {
+    color: #6255a5;
+    background: none;
+    border-bottom: 3px solid #6255a5;
+}
+
+#navbarmenu ul li.dropdown > div > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #333333;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+#navbarmenu ul li.dropdown > div > a#user-logout {
+    color: #6255a5;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#navbarmenu ul li.dropdown > div > a:hover,
+#navbarmenu ul li.dropdown > div > a#user-logout:hover {
+    background: #6255a5;
+    color: #fff;
+}
+
+div.dropdown-menu > a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #333333;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+div.dropdown-menu > a:hover {
+    background: #6255a5;
+    color: #fff;
+}
+
+/*====================
+        Buttons
+=====================*/
+.btn-general {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-white {
+    background: #fff;
+}
+
+.btn-purple {
+    background: #6255a5;
+    border-radius: 3px;
+}
+
+.btn-transparent {
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.btn-transparent:hover {
+    color: #fff;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+/*===========================
+        footer
+==========================*/
+footer #footer-content {
+    padding: 10px 0;
+}
+
+.footer-line p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #333333;
+
+}
+
+footer ul.social-list li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+footer ul.social-list li a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #6255a5;
+    border-radius: 50%;
+}
+
+/*======================
+   My Profile Page
+======================*/
+.myprofile-heading,
+.add-admin-heading {
+    margin-top: 116px;
+    margin-bottom: 20px;
+}
+
+.myprofile-heading .myprofile-heading-bold p,
+.add-admin-heading .add-admin-heading-bold p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #6255a5;
+    margin-bottom: 8px;
+}
+
+/* User profile form & add admin form */
+.myprofile-form .form-group > label,
+.add-admin-form .form-group > label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #333333;
+}
+
+.myprofile-form .form-group input::placeholder,
+.add-admin-form .form-group input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #8a8a8a;
+}
+
+/* this is for remove arrow of input box */
+#myprofile-phone-no-code,
+#add-admin-phone-no-code {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+/* For IE10 */
+#myprofile-phone-no-code::-ms-expand,
+#add-admin-phone-no-code::-ms-expand {
+    display: none;
+}
+
+#myprofile-phone-no-code,
+#add-admin-phone-no-code {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    color: #8a8a8a;
+    background-image: url('../images/Dashboard/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 80px 13px;
+}
+
+.myprofile-form .form-group > textarea::placeholder {
+    text-align: center;
+    padding-top: 70px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #8a8a8a;
+}
+
+.myprofile-form .form-group > textarea {
+    background-image: url('../images/addnotes/upload-file.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#myprofile-submit-btn {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+#add-admin-submit-btn {
+    margin-top: 5px;
+    margin-bottom: 120px;
+}
+
+#myprofile-submit-btn a,
+#add-admin-submit-btn button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+}
+
+/*==========================
+Manage System Configuration
+==========================*/
+.msc-heading {
+    margin-top: 116px;
+    margin-bottom: 20px;
+}
+
+.msc-heading .msc-heading-bold p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #6255a5;
+    margin-bottom: 8px;
+}
+
+/* msc form */
+.msc-form .form-group > label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    color: #333333;
+}
+
+.msc-form .form-group input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #8a8a8a;
+}
+
+.msc-form .form-group > textarea::placeholder {
+    text-align: center;
+    padding-top: 70px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #8a8a8a;
+}
+
+.msc-form .form-group > textarea {
+    background-image: url('../images/addnotes/upload-file.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#msc-submit-btn {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+#msc-submit-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100px;
+    height: 40px;
+}
+
+/*===========================
+    Dashboard-admin Page
+==========================*/
+#dashboard-admin-info-header {
+    margin-top: 136px;
+}
+
+#dashboard-admin-info-header .dashboard-heading p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+}
+
+#dashboard-admin-info {
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+.dashboard-info-card {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    height: 131px;
+    padding: 20px 0;
+}
+
+.dashboard-info-card .dashboard-info-card-head h3 > a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #6255a5;
+    text-decoration: none;
+}
+
+.dashboard-info-card .dashboard-info-card-p p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333333;
+}
+
+#dash-published-notes {
+    margin: 20px 0;
+}
+
+.dash-head h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+}
+
+.dash-search {
+    display: inline-flex;
+}
+
+.dash-search #search-published-note {
+    width: 250px;
+    margin-right: 10px;
+    background-image: url('../images/Dashboard/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+    padding-left: 35px;
+}
+
+.dash-search-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-right: 10px;
+    color: #fff;
+    width: 100px;
+    height: 37px;
+}
+
+.dash-search-btn a:hover {
+    color: #fff;
+}
+
+/* this is for remove arrow of input box */
+.dash-search .form-group > select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+/* For IE10 */
+.dash-search .form-group > select::-ms-expand {
+    display: none;
+}
+
+#dash-search-by-month {
+    width: 150px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    color: #8a8a8a;
+    background-image: url('../images/Dashboard/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 120px 13px;
+}
+
+/* Table */
+#published-notes-info table {
+    margin-top: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#published-notes-info table tr {
+    height: 55px;
+}
+
+#published-notes-info table tr > th {
+    text-align: center;
+    padding-bottom: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+#published-notes-info table tr > td {
+    text-align: center;
+    padding-top: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    text-transform: capitalize;
+}
+
+#published-notes-info table tr > td > a {
+    color: #6255a5;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#published-notes-info .table-hover tbody tr:hover {
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#published-notes-info table tr > td > div.action-img > div {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+/* Pagination */
+
+#dash-pagination {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#dash-pagination .pagination li > a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #333333;
+    border: none;
+    margin: 2px;
+    width: 25px;
+    height: 25px;
+}
+
+#dash-pagination .pagination .fa-angle-left,
+.fa-angle-right {
+    font-size: 20px;
+    width: 8px;
+    color: #333333;
+}
+
+#dash-pagination .pagination li > a:hover {
+    background: none;
+}
+
+#dash-pagination .pagination li > a:focus {
+    /*    outline: none !important;*/
+    box-shadow: none;
+}
+
+#dash-pagination .pagination li > a.active {
+    background: #6255a5;
+    border-radius: 50%;
+    color: #ffffff;
+    width: 34px;
+    height: 34px;
+}
+
+/*=================================
+Manage Administrator,Category,Country,Type Page 
+======================*/
+#manage-administrator-header,
+#manage-category-header,
+#manage-country-header,
+#manage-type-header {
+    margin-top: 116px;
+    margin-bottom: 20px;
+}
+
+#manage-administrator-header .manage-admin-heading p,
+#manage-category-header .manage-category-heading p,
+#manage-country-header .manage-country-heading p,
+#manage-type-header .manage-type-heading p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #6255a5;
+    margin-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/*
+.add-admin-search {
+    display: inline-flex;
+}
+*/
+.add-admin-search #administrator-search,
+.manage-category-search #category-search,
+.manage-country-search #country-search,
+.manage-type-search #type-search {
+    width: 250px;
+    margin-right: 10px;
+    background-image: url('../images/Dashboard/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+    padding-left: 35px;
+}
+
+.add-administrator-btn a,
+.add-category-btn a,
+.add-country-btn a,
+.add-type-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-right: 10px;
+    color: #fff;
+    width: 230px;
+    height: 37px;
+}
+
+.add-category-btn a {
+    width: 180px;
+    height: 37px;
+}
+
+.add-country-btn a {
+    width: 150px;
+}
+
+.add-type-btn a {
+    width: 120px;
+}
+
+.administrator-search-btn a,
+.category-search-btn a,
+.country-search-btn a,
+.type-search-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-right: 10px;
+    color: #fff;
+    width: 100%;
+    height: 37px;
+}
+
+.add-administrator-btn a:hover,
+.administrator-search-btn a:hover,
+.add-category-btn a:hover,
+.category-search-btn a:hover,
+.add-country-btn a:hover,
+.country-search-btn a:hover,
+.add-type-btn a:hover,
+.type-search-btn a:hover {
+    color: #fff;
+}
+
+/* Table */
+#administrator-info table,
+#category-info table,
+#country-info table,
+#type-info table {
+    margin-top: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#administrator-info table tr,
+#category-info table tr,
+#country-info table tr,
+#type-info table tr {
+    height: 55px;
+}
+
+#administrator-info table tr > th,
+#category-info table tr > th,
+#country-info table tr > th,
+#type-info table tr > th {
+    text-align: center;
+    padding-bottom: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+#administrator-info table tr > td,
+#category-info table tr > td,
+#country-info table tr > td,
+#type-info table tr > td {
+    text-align: center;
+    padding-top: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    text-transform: capitalize;
+}
+
+#administrator-info .table-hover tbody tr:hover,
+#category-info .table-hover tbody tr:hover,
+#country-info .table-hover tbody tr:hover,
+#type-info .table-hover tbody tr:hover {
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#administrator-info table tr > td > div.action-img > div > a > img,
+#category-info table tr > td > div.action-img > div > a > img,
+#country-info table tr > td > div.action-img > div > a > img,
+#type-info table tr > td > div.action-img > div > a > img {
+    width: 80%;
+    height: 80%;
+}
+
+#administrator-info table tr > td > div.action-img > div,
+#category-info table tr > td > div.action-img > div,
+#country-info table tr > td > div.action-img > div,
+#type-info table tr > td > div.action-img > div {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+/*======================
+Add Category,Type,Country Page
+======================*/
+.add-category-heading,
+.add-type-heading,
+.add-country-heading {
+    margin-top: 116px;
+    margin-bottom: 20px;
+}
+
+.add-category-heading .add-category-heading-bold p,
+.add-type-heading .add-type-heading-bold p,
+.add-country-heading .add-country-heading-bold p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #6255a5;
+    margin-bottom: 8px;
+}
+
+.add-category-form .form-group > label,
+.add-type-form .form-group > label,
+.add-country-form .form-group > label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #333333;
+}
+
+.add-category-form .form-group input::placeholder,
+.add-type-form .form-group input::placeholder,
+.add-country-form .form-group input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #8a8a8a;
+}
+
+.add-category-form .form-group > textarea::placeholder,
+.add-type-form .form-group > textarea::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #8a8a8a;
+}
+
+#add-category-submit-btn,
+#add-type-submit-btn,
+#add-country-submit-btn {
+    margin-top: 5px;
+    margin-bottom: 220px;
+}
+
+#add-category-submit-btn button,
+#add-type-submit-btn button,
+#add-country-submit-btn button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+}
+
+/*===========================
+    Note Details Page
+==========================*/
+#note-detail-01 {
+    margin-top: 136px;
+    margin-bottom: 60px;
+}
+
+.nd-heading h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+#nd-note-img img {
+    width: 240px;
+    height: 300px;
+}
+
+#nd-note-description {
+    padding-top: 10px;
+    padding-right: 40px;
+}
+
+#nd-note-description #nd-note-description-head h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin-bottom: 5px;
+}
+
+#nd-note-description #nd-note-description-head p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+#nd-note-description-content p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#nd-download-btn {
+    width: 240px;
+    height: 50px;
+}
+
+#nd-download-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #fff;
+    padding: 7px 15px;
+    ;
+}
+
+.nd-note-info-table {
+    margin: 0;
+}
+
+.nd-note-info-table td {
+    padding: 0;
+    margin: 0;
+}
+
+.nd-note-info-table td.nd-note-info-table-row-1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #333333;
+}
+
+.nd-note-info-table td.nd-note-info-table-row-2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #6255a5;
+    text-align: right;
+}
+
+.nd-note-info-table td > div.review {
+    text-align: right;
+}
+
+.nd-note-info-table td > div.review > div.reviewer-rating img {
+    height: 18px;
+    width: 18px;
+}
+
+.nd-note-info-table td > div.review > div.reviewer-rating span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #6255a5;
+}
+
+#nd-note-info p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #df3434;
+    margin-top: 10px;
+}
+
+/* Thanks Modal */
+.modal-dialog {
+    top: 100px;
+}
+
+.modal-content .btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    outline: none;
+}
+
+.modal-content-inner {
+    padding: 40px 30px 0px 15px;
+}
+
+.modal-content-inner .modal-header-img img {
+    height: 50px;
+    width: 50px;
+}
+
+.modal-header {
+    border-bottom: 0 none;
+    padding-top: 10px;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+
+.modal-header h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+}
+
+.modal-body #nd-thankmodal-bold p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.modal-body #nd-thankmodal-normal p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* notes details part 02 */
+#note-detail-02 {
+    margin: 60px 0;
+}
+
+#nd-note-preview embed {
+    height: 363px;
+    width: 100%;
+}
+
+#nd-customer-review {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+#nd-customer-review > div.row > div.col-md-2,
+#nd-customer-review > div.row > div.col-md-10 {
+    padding: 0;
+}
+
+#nd-customer-review .reviewer-info h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#nd-customer-review .reviewer-info .reviewer-rating img {
+    width: 15px;
+    margin-bottom: 12px;
+}
+
+#nd-customer-review .reviewer-review-content p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+/*======================
+    Members Page / Member Details / Spam report / Notes under review / published note / Downloaded Notes / Rejected Notes
+======================*/
+#members,
+#member-details-section,
+#spam-report,
+#notes-under-review,
+#published-note-sec,
+#downloaded-note-sec,
+#rejected-note-sec {
+    margin-top: 116px;
+    margin-bottom: 20px;
+}
+
+#members .members-head p,
+#member-details-section .member-detail-head p,
+#spam-report .spam-report-head p,
+#notes-under-review .notes-under-review-head p,
+#published-note-sec .published-note-sec-head p,
+#downloaded-note-sec .downloaded-note-sec-head p,
+#rejected-note-sec .rejected-note-sec-head p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #6255a5;
+    margin-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+#notes-under-review label,
+#published-note-sec label,
+.downloaded-note-label,
+.rejected-note-search-01 label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #333333;
+}
+
+.members-search,
+.spam-report-search,
+.notes-under-review-search,
+.published-note-search,
+.downloaded-note-search-02,
+.rejected-note-search-02 {
+    display: inline-flex;
+}
+
+.downloaded-note-search-02,
+.rejected-note-search-02 {
+    margin-top: 28px;
+}
+
+.members-search #search-members,
+.spam-report-search #search-spam-report,
+.notes-under-review-search #notes-under-review-search-field,
+.published-note-search #published-note-search-field,
+.downloaded-note-search-02 #downloaded-note-search-field,
+.rejected-note-search-02 #rejected-note-search-field {
+    width: 250px;
+    margin-right: 10px;
+    background-image: url('../images/Dashboard/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 8px;
+    padding-left: 35px;
+}
+
+.members-search-btn a,
+.spam-report-search-btn a,
+.notes-under-review-search-btn a,
+.published-note-search-btn a,
+.downloaded-note-search-btn a,
+.rejected-note-search-btn a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-right: 10px;
+    color: #fff;
+    width: 100%;
+    height: 37px;
+}
+
+.members-search-btn a:hover,
+.spam-report-search-btn a:hover,
+.notes-under-review-search-btn a:hover,
+.published-note-search-btn a:hover,
+.downloaded-note-search-btn a:hover,
+.rejected-note-search-btn a:hover {
+    color: #fff;
+}
+
+/* Table */
+#members-info table,
+#member-detail-note-info-section table,
+#spam-report-info table,
+#notes-under-review-info table,
+#published-note-info table,
+#downloaded-note-info table,
+#rejected-note-info table {
+    margin-top: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#members-info table tr,
+#member-detail-note-info-section table tr,
+#spam-report-info table tr,
+#notes-under-review-info table tr,
+#published-note-info table tr,
+#downloaded-note-info table tr,
+#rejected-note-info table tr {
+    height: 55px;
+}
+
+#members-info table tr > th,
+#member-detail-note-info-section table tr > th,
+#spam-report-info table tr > th,
+#notes-under-review-info table tr > th,
+#published-note-info table tr > th,
+#downloaded-note-info table tr > th,
+#rejected-note-info table tr > th {
+    padding-bottom: 17px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15px;
+    color: #333333;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#members-info table tr > td,
+#member-detail-note-info-section table tr > td,
+#spam-report-info table tr > td,
+#notes-under-review-info table tr > td,
+#published-note-info table tr > td,
+#downloaded-note-info table tr > td,
+#rejected-note-info table tr > td {
+    text-align: center;
+    padding-top: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+}
+
+#members-info table tr > td > a,
+#member-detail-note-info-section table tr > td > a,
+#spam-report-info table tr > td > a,
+#notes-under-review-info table tr > td > a,
+#published-note-info table tr > td > a,
+#downloaded-note-info table tr > td > a,
+#rejected-note-info table tr > td > a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6255a5;
+    text-decoration: none;
+}
+
+#members-info .table-hover tbody tr:hover,
+#member-detail-note-info-section .table-hover tbody tr:hover,
+#spam-report-info .table-hover tbody tr:hover,
+#notes-under-review-info .table-hover tbody tr:hover,
+#published-note-info .table-hover tbody tr:hover,
+#downloaded-note-info .table-hover tbody tr:hover,
+#rejected-note-info .table-hover tbody tr:hover {
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+#notes-under-review-info table tr > td > div.action-img > div.view-seller-icon > a > img,
+#published-note-info table tr > td > div.action-img > div.view-publisher-icon > a > img,
+#downloaded-note-info table tr > td > div.action-img > div.view-downloaded-buyer-icon > a > img,
+#downloaded-note-info table tr > td > div.action-img > div.view-downloaded-seller-icon > a > img,
+#rejected-note-info table tr > td > div.action-img > div.view-rejected-seller-icon > a > img {
+    width: 80%;
+}
+
+#members-info table tr > td > div.action-img > div,
+#member-detail-note-info-section table tr > td > div.action-img > div,
+#notes-under-review-info table tr > td > div.action-img > div,
+#published-note-info table tr > td > div.action-img > div,
+#downloaded-note-info table tr > td > div.action-img > div.action-downloaded-note,
+#rejected-note-info table tr > td > div.action-img > div.action-rejected-note {
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+#published-note-info table tr > td {
+    padding-left: 0;
+}
+
+/* Notes Under Review Buttons */
+#notes-under-review-info table tr > td > div.notes-under-review-action-btns {
+    display: inline-flex;
+}
+
+#notes-under-review-info table tr > td > div.notes-under-review-action-btns button {
+    width: 80px;
+}
+
+/*==================================
+Member Details Information Table
+===================================*/
+.member-info-table tr > td {
+    padding: 0;
+}
+
+.member-info-table tr > td.member-info-table-col-1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #333333;
+}
+
+.member-info-table tr > td.member-info-table-col-2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #6255a5;
+}
+
+#member-details-vertical-line {
+    border-left: 1px solid #d1d1d1;
+}
+
+#member-info-02 {
+    margin-left: 20px;
+}
+
+#notes-heading h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #6255a5;
+    margin: 20px 0;
+}
+
+/*===========================================
+Notes under review select dropdown style/published note / downloaded note / Rejecetd Note
+=============================================*/
+/* this is for remove arrow of input box */
+#notes-under-review-by-seller,
+#published-note-by-seller,
+.downloaded-note-search-01 .form-group select,
+#rejected-note-seller {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+/* For IE10 */
+#notes-under-review-by-seller::-ms-expand,
+#published-note-by-seller::-ms-expand,
+.downloaded-note-search-01 .form-group select::-ms-expand,
+#rejected-note-seller::-ms-expand {
+    display: none;
+}
+
+#notes-under-review-by-seller,
+#published-note-by-seller,
+#rejected-note-seller {
+    width: 150px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    color: #8a8a8a;
+    background-image: url('../images/Dashboard/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 120px 13px;
+}
+
+.downloaded-note-search-01 .form-group select {
+    width: 170px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    color: #8a8a8a;
+    background-image: url('../images/Dashboard/arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: 140px 13px;
+}
+
+/* Reject Modal */
+#rejectModal .modal-dialog {
+    top: 150px;
+}
+
+#reviewModal .modal-content-inner {
+    padding: 0 20px;
+}
+
+#rejectModal .modal-header h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+}
+
+#rejectModal .modal-body label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #333333;
+}
+
+#rejectModal .modal-body textarea::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #8a8a8a;
+}
+
+#reject-modal-btn a {
+    width: 100px;
+    background: #ff3636;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #fff;
+}
+
+#reject-modal-cancel-btn a {
+    width: 100px;
+    background: #cccccc;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #fff;
+}
